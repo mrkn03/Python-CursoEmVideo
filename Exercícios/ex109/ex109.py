@@ -2,8 +2,9 @@
 valor retornado por elas vai ser ou nao formatado pela função moeda(), desenvolvida no desafio 108"""
 import moedas
 
-preco = float(input("Digite um valor:"))
+preco = float(input("Digite um preço:"))
 
-print(f"A metade de {moedas.moeda(preco)} é {moedas.metade(preco)}")
-print(f"O dobro de {moedas.moeda(preco, sit=True)} é {moedas.dobro(preco)}")
-print(f"Aumentando 10%, temos {moedas.aumentar(preco, 10)}")
+print(f"A metade de {moedas.moeda(preco)} é {moedas.moeda(moedas.metade(preco, True))}")
+print(f"O dobro de {moedas.moeda(preco)} é {moedas.moeda(moedas.dobro(preco, True))}")
+print(f"Aumentando 10%, temos {moedas.moeda(moedas.aumentar(preco, 10, True))}")
+print(f"Reduzindo 13%, temos {moedas.moeda(moedas.diminuir(preco, True))}")
