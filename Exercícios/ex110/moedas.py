@@ -58,3 +58,7 @@ def moeda(valor=0, moeda = "R$"):
         :param valor: Valor aa ser formatado
         :return: Retorna o valor já formatado"""
     return f"{moeda}{valor:.2f}".replace(".",",")
+
+
+def resumo(função):
+    return help(função)
