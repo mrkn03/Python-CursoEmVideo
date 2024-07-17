@@ -60,5 +60,21 @@ def moeda(valor=0, moeda = "R$"):
     return f"{moeda}{valor:.2f}".replace(".",",")
 
 
-def resumo(função):
-    return help(função)
+def resumo(valor, taxa_aumento, taxa_reducao):
+    """
+        Função feita para reduzir o uso das funções anteriores
+
+    :param valor: valor a ser calculado
+    :param taxa_aumento: taxa de aumento a ser calculada
+    :param taxa_reducao: taxa de redução a ser calculada
+    :return: noreturn
+    """
+    print("-"*30)
+    print("RESUMO DO VALOR".center(30))
+    print("-"*30)
+    print(f"Preço analisado: \t{moeda(valor)}")
+    print(f"Dobro do preço: \t{dobro(valor)}")
+    print(f"Metade do preço: \t{metade(valor)}")
+    print(f"{taxa_aumento}% de aumento: \t{aumentar(valor,taxa_aumento)}")
+    print(f"{taxa_reducao}% de redução: \t{diminuir(valor, taxa_reducao)}")
+    print("-"*30)
